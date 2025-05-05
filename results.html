@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Results</title>
+  <link rel="icon" href="logo.svg" type="image/svg+xml"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-4 text-center">
+  <div class="max-w-md mx-auto bg-white p-6 rounded shadow">
+    <h2 class="text-2xl font-bold mb-4">Game Over!</h2>
+    <p class="text-lg mb-4">You solved <span id="correct-count"></span> of 10 words.</p>
+    <button id="see-leaderboard"
+            class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded">
+      See Leaderboard
+    </button>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      TwistleGame.showResults();
+      document.getElementById('see-leaderboard')
+              .addEventListener('click', () => { location.href = 'leaderboard.html' });
+    });
+  </script>
+</body>
+</html>

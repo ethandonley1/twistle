@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Twistle</title>
+  <link rel="icon" href="logo.svg" type="image/svg+xml" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+  <div class="bg-white rounded-lg p-8 max-w-lg mx-4 shadow-md text-center">
+    <h1 class="text-3xl font-bold mb-6">Twistle</h1>
+    <p class="mb-4">Unscramble words against the clock!</p>
+    <ul class="text-left list-disc list-inside mb-8 space-y-2">
+      <li>Solve 10 themed word puzzles</li>
+      <li>30 seconds per word</li>
+      <li>3 attempts per word</li>
+      <li>Hints unlock after 10 seconds</li>
+    </ul>
+    <button id="start-btn"
+            class="w-full py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-bold text-lg">
+      Start Playing
+    </button>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById('start-btn').addEventListener('click', () => {
+      location.href = 'setup_name.html';
+    });
+  </script>
+</body>
+</html>
