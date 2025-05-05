@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Welcome to Twistle{% endblock %}
+
+{% block content %}
+<div class="min-h-screen flex items-center justify-center">
+    <div class="bg-white dark:bg-gray-800 rounded-lg p-8 w-full max-w-lg mx-4 shadow-md text-center">
+        <h1 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Twistle</h1>
+        
+        <div class="mb-8 text-gray-700 dark:text-gray-300">
+            <p class="mb-4">Unscramble words against the clock!</p>
+            <ul class="text-left list-disc list-inside space-y-2">
+                <li>Solve 10 themed word puzzles</li>
+                <li>30 seconds per word</li>
+                <li>3 attempts per word</li>
+                <li>Hints unlock after 10 seconds</li>
+            </ul>
+        </div>
+
+        <form action="{{ url_for('start_game') }}" method="POST">
+            <button type="submit" 
+                    class="w-full py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-bold text-lg transition-colors">
+                Start Playing
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}

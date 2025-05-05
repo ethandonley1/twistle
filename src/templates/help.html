@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}Twistle - How To Play{% endblock %}
+
+{% block content %}
+<div class="flex flex-col items-center w-full max-w-md px-4">
+    <div class="flex justify-between items-center w-full py-4">
+        <a href="{{ url_for('index') }}" class="p-2 rounded-full hover:bg-gray-200">
+            <span class="font-bold">✕</span>
+        </a>
+        <h1 class="text-xl font-bold">How To Play</h1>
+        <div class="w-6"></div>
+    </div>
+    
+    <div class="bg-white rounded-lg p-6 w-full shadow-md dark:bg-gray-800 dark:text-white">
+        <div class="space-y-4">
+            <p class="font-medium">Unscramble 10 words in Twistle!</p>
+            
+            <div class="space-y-2">
+                <p class="font-bold">Game Rules:</p>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>Unscramble each jumbled word</li>
+                    <li>You have 3 attempts per word</li>
+                    <li>30 seconds time limit for each word</li>
+                    <li>Words get progressively longer and more difficult</li>
+                    <li>A category hint appears after 10 seconds</li>
+                </ul>
+            </div>
+            
+            <div class="space-y-2">
+                <p class="font-bold">Scoring:</p>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>Base points (10) for solving each word</li>
+                    <li>Time bonus: 2 points for each second remaining</li>
+                    <li>Attempt bonus: 5 points for each unused attempt</li>
+                    <li>Word length bonus: Harder words are worth more</li>
+                    <li>No points if you fail to solve a word</li>
+                </ul>
+            </div>
+            
+            <div class="space-y-2">
+                <p class="font-bold">Example:</p>
+                <p>Jumbled: <span class="font-bold">act</span></p>
+                <p>Solution: <span class="font-bold">cat</span></p>
+            </div>
+            
+            <p>A new set of Twistle words is available each day, with a special theme connecting all the words!</p>
+            
+            <div class="bg-gray-100 p-4 rounded-lg mt-4 dark:bg-gray-700">
+                <p class="font-bold mb-2">Tips for Success:</p>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li>Look for common letter patterns</li>
+                    <li>Pay attention to the word length</li>
+                    <li>Use the category hint if you're stuck</li>
+                    <li>Try different arrangements of vowels and consonants</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
